@@ -55,7 +55,11 @@
 					'<br/><span class="details">', ev.attendee, ' @ ', ev.location, '</span>'
 				].join('');
 				el.className = 'cat_' + catIndex(ev.category);
-				el.title = [ev.summary, ev.attendee, ev.location].join('\n');
+				el.title = [
+					ev.summary,
+					ev.duration + ' min by ' + ev.attendee,
+					ev.start.hms.substring(0, 5) + ' @ ' + ev.location
+				].join('\n');
 				return {
 					id:      '' + idx,
 					content: el,
@@ -71,12 +75,14 @@
 			var timeline = new vis.Timeline(ctnEl);
 
 			var min15 = 1000 * 60 * 15;
+			var hour1 = 1000 * 60 * 60;
 			var day1  = 1000 * 60 * 60 * 24;
 			timeline.setOptions({
 				//height: '800px',
 				groupOrder: 'start',
 				min:     new Date(2015, 0, 31,  9),
 				max:     new Date(2015, 1,  1, 19),
+				zoom:    hour1,
 				zoomMin: min15,
 				zoomMax: day1
 			});
@@ -84,8 +90,12 @@
 			if (location.hash) {
 				timeline.setGroups(groups);	
 			}
-			
+
 			timeline.setItems(items);
+			timeline.setWindow(
+				new Date(2015, 0, 31,  9),
+				new Date(2015, 0, 31, 13)
+			);
 		}
 	});
 
