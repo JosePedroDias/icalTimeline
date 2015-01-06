@@ -34,9 +34,11 @@
 
 			// create color scale
 			var palette = categories.map(function(category, idx) {
-				return chroma.hsv(
-					idx * 360 / numCategories,
-				.5, 0.75).hex();
+				return new chroma.hcl(//120,1,.5,'hsv');chroma.hcl(
+					idx * 360/ numCategories,
+					1,
+					0.66
+				).hex();
 			});
 			var styleEl = document.createElement('style');
 			styleEl.innerHTML = palette.map(function(clr, idx) {
