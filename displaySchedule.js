@@ -7,7 +7,7 @@
 	// http://rawgit.com/almende/vis/master/examples/timeline/10_limit_move_and_zoom.html
 
 	ajax({
-		uri: 'fosdem2015.json',
+		uri: 'fosdem2016.json',
 		cb: function(err, o) {
 			if (err) { return alert(err); }
 

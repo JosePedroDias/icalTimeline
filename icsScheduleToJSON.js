@@ -117,5 +117,5 @@ var onParsedFile2 = function(data) {
 
 //onParsedFile( ical.parseFile(cal) );
 
-fs.writeFileSync('fosdem2015.json', JSON.stringify( onParsedFile2( ical.parseFile(cal) ) ) );
+fs.writeFileSync('fosdem2016.json', JSON.stringify( onParsedFile2( ical.parseFile(cal) ) ) );
 //fs.writeFileSync('fosdem2015.json', JSON.stringify( onParsedFile2( ical.parseFile(cal) ), null, '\t' ) );
