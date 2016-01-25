@@ -82,8 +82,8 @@
 			timeline.setOptions({
 				//height: '800px',
 				groupOrder: 'start',
-				min:     new Date(2015, 0, 31,  9),
-				max:     new Date(2015, 1,  1, 19),
+				min:     new Date(2016, 0, 29,  9),
+				max:     new Date(2016, 0, 31, 19),
 				zoom:    hour1,
 				zoomMin: min15,
 				zoomMax: day1
@@ -95,8 +95,8 @@
 
 			timeline.setItems(items);
 			timeline.setWindow(
-				new Date(2015, 0, 31,  9),
-				new Date(2015, 0, 31, 13)
+				new Date(2016, 0, 29,  9),
+				new Date(2016, 0, 31, 13)
 			);
 		}
 	});
