@@ -1,5 +1,5 @@
 Used [ical module](https://github.com/peterbraden/ical.js) to process
-a conference schedule [FOSDEM 2015](https://fosdem.org/2016/schedule/ical)
+a conference schedule [FOSDEM 2016](https://fosdem.org/2016/schedule/ical)
 into an interactive timeline:
 
 * [ungrouped schedule timeline](http://rawgit.com/JosePedroDias/icalTimeline/master/displaySchedule.html)
